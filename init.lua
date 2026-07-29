@@ -114,11 +114,12 @@ vim.lsp.config("clangd", {
     cmd = {
         "clangd",
         "--background-index",
-        "--query-driver=/home/collin/.arduino15/packages/esp32/tools/esp-rv32/*/bin/riscv32-esp-elf-*",
+        "--query-driver="
+            .. home
+            .. "/.arduino15/packages/esp32/tools/esp-rv32/*/bin/riscv32-esp-elf-*",
     },
 })
 
-vim.lsp.enable("clangd")
 vim.lsp.enable("clangd")
 
 vim.api.nvim_create_autocmd("BufWritePre", {
