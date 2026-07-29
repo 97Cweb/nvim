@@ -109,7 +109,7 @@ vim.lsp.config("ruff", {
 })
 vim.lsp.enable("ruff")
 
-
+local home = vim.fn.expand("~")
 vim.lsp.config("clangd", {
     cmd = {
         "clangd",
