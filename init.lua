@@ -114,9 +114,8 @@ vim.lsp.config("clangd", {
     cmd = {
         "clangd",
         "--background-index",
-        "--query-driver="
-            .. home
-            .. "/.arduino15/packages/esp32/tools/esp-rv32/*/bin/riscv32-esp-elf-*",
+        "--clang-tidy",
+        "--completion-style=detailed",
     },
 })
 
@@ -153,3 +152,4 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+
